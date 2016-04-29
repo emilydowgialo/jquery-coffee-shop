@@ -47,22 +47,22 @@
 <script>
     
     // Create variable to hold the coffee image id
-    myImage = $('#coffee_image');
+    // var myImage = $('#coffee_image');
     // Change the source of the image to coffee_beans
-    myImage.attr('src', 'static/coffee_beans.jpg');
+    $('#coffee_image').attr('src', 'static/coffee_beans.jpg');
     
     // No use for this variable yet, so leaving in Javascript for now
     var myRevenueMessage = document.getElementById("revenue");
 
     // Cycles through series of images at set time intervals
     function makeCoffee() {
-         myImage.attr('src', 'static/coffee_machine.jpg');
-         setTimeout(function() { myImage.attr('src', 'static/coffee_mug.jpg'); }, 1000);
-         setTimeout(function() { myImage.attr('src', 'static/coffee_beans.jpg'); }, 2500);
+         $('#coffee_image').attr('src', 'static/coffee_machine.jpg');
+         setTimeout(function() { $('#coffee_image').attr('src', 'static/coffee_mug.jpg'); }, 1000);
+         setTimeout(function() { $('#coffee_image').attr('src', 'static/coffee_beans.jpg'); }, 2500);
     }
 
     // When user clicks on coffee picture triggers makeCoffee function
-    myImage.click(makeCoffee);
+    $('#coffee_image').click(makeCoffee);
 
 </script>
 
